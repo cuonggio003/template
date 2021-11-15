@@ -45,7 +45,7 @@ class CategoryController extends Controller
     function delete(Request $request, $id)
     {
         $categories = Category::findOrFail($id);
-        dd($categories);
+        
         $categories->delete();
 
         return redirect()->route('categories.delete');
